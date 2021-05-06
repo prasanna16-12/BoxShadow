@@ -1,0 +1,6 @@
+.preview-container{
+    min-width: 200px;
+    min-height: 200px;
+    background-color: rgb(189, 209, 209);
+    border-radius: 1rem;
+}

@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container{
+  width: 100vw;
   min-height: 100vh;
+  background-color:whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-evenly;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+
+.slider-container{
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items:stretch;
+  justify-content:space-evenly;
+  background-color: azure;
+  padding: 1.5rem;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.245);
+  border-radius: .5rem;
+
+}
+.slider-container div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type=range] {
+  width: 250px;
+  -webkit-appearance: none;
+  margin-left:  1rem ;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+
+  background: #0588fb;
+  border-radius: 4px;
+}
+input[type=range]::-webkit-slider-thumb {
+
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: #2986d8;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.245);
+  border: 6px solid rgb(255, 255, 255);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8.5px;
+}
+
+input[type=range]::-webkit-slider-thumb:hover{
+  border: 4px solid rgb(255, 255, 255);
+  box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.245);
+  transition: all 200ms ease;
+}
+
+input[type=color]{
+  width: 50%;
+	height: 25px;
+	border: none;
+	background: none;
+  cursor: pointer;
+
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0px;
+
+}
+input[type="color"]::-webkit-color-swatch {
+	border: solid 1px rgba(0, 0, 0, 0.245); /*change color of the swatch border here*/
+	border-radius: 15px;
+}
+
+.rdo {
+  position: relative;
+  display: block;
+  float: left;
+  width: 25px;
+  height: 25px;
+  border-radius: 13px;
+  background-color: #606062;
+  background-image: linear-gradient(#474749, #606062);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.15), inset 0 -1px 1px rgba(0,0,0,0.15);
+  transition: all 0.15s ease;
+}
+label span{
+  margin-top: -.2rem;
+  margin-right: .5rem;
+  text-align:justify;
+}
+
+input[type="radio"] {
+  padding: 0 1rem;
+  position: absolute;
+  opacity: 0;
+}
+input[type="radio"]:checked + .rdo {
+  background-color: #606062;
+  background-image: linear-gradient(#255cd2, #1d52c1);
+}
+@media only screen and (max-width: 900px) {
+  .container{
+  width: 100vw;
+  min-height: 100vh;
+  background-color:whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content:space-evenly;
+  padding: 2rem;
+
 }
 
-.App-link {
-  color: #61dafb;
+}
+@media only screen and (max-width: 300px) {
+  input[type=range] {
+  width: 80px;
+  -webkit-appearance: none;
+  margin-left:  1rem ;
+}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+@media only screen and (max-width: 500px) {
+  input[type=range] {
+  width: 150px;
+  -webkit-appearance: none;
+  margin-left:  1rem ;
+}
 }
